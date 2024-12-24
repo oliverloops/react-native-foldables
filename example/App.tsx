@@ -1,9 +1,11 @@
-import { useEvent } from 'expo';
-import ReactNativeFoldables, { ReactNativeFoldablesView } from 'react-native-foldables';
-import { Button, SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { useEvent } from "expo";
+import ReactNativeFoldables, {
+  ReactNativeFoldablesView,
+} from "react-native-foldables";
+import { Button, SafeAreaView, ScrollView, Text, View } from "react-native";
 
 export default function App() {
-  const onChangePayload = useEvent(ReactNativeFoldables, 'onChange');
+  const onChangePayload = useEvent(ReactNativeFoldables, "onChange");
 
   return (
     <SafeAreaView style={styles.container}>
@@ -19,7 +21,7 @@ export default function App() {
           <Button
             title="Set value"
             onPress={async () => {
-              await ReactNativeFoldables.setValueAsync('Hello from JS!');
+              await ReactNativeFoldables.setValueAsync("Hello from JS!");
             }}
           />
         </Group>
@@ -28,7 +30,7 @@ export default function App() {
         </Group>
         <Group name="Views">
           <ReactNativeFoldablesView
-            url="https://www.example.com"
+            url="https://www.oliverloops.com"
             onLoad={({ nativeEvent: { url } }) => console.log(`Loaded: ${url}`)}
             style={styles.view}
           />
@@ -58,13 +60,13 @@ const styles = {
   },
   group: {
     margin: 20,
-    backgroundColor: '#fff',
+    backgroundColor: "#fff",
     borderRadius: 10,
     padding: 20,
   },
   container: {
     flex: 1,
-    backgroundColor: '#eee',
+    backgroundColor: "#eee",
   },
   view: {
     flex: 1,
