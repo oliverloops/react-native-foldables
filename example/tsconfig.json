@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "react-native-foldables": ["../src/index"],
+      "react-native-foldables/*": ["../src/*"]
+    }
+  }
+}
